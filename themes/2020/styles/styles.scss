@@ -1,0 +1,27 @@
+
+/* Import structure core layout and browser resets */
+
+@import "_structure.scss";
+
+/* Import theme variables and self hosted fonts */
+
+@import "_variables.scss";
+
+/* Import remote fonts */
+
+@import url("https://use.typekit.net/enp8zun.css");
+
+/* Import local fonts */
+
+@font-face {
+  font-family: microns;
+  src: url(/themes/2020/fonts/microns.woff2);
+}
+
+/* Import UI elements and navigation */
+
+@import "_elements.scss";
+
+/* Import project styles */
+
+@import "_main.scss";

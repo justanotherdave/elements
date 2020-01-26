@@ -1,0 +1,682 @@
+
+	/* Structure v 1.1.4 - structure.davidclarke.me */
+	
+	/* Browser Resets */
+
+	html 
+{
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+	*, *:before, *:after 
+{
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+	body, html 
+{
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+	address, caption, cite, code,
+	dfn, em, strong, th, var, b, i,
+	small, h1, h2, h3, h4, h5, h6,
+	sub, sup, ins, del, mark, a,
+	code, kbd, samp, abbr, time,
+	q, blockquote, pre, xmp, ul, li,
+	ol, dl, dt, dd, thead, tfoot, tr, th,
+	div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+	pre, code, form, fieldset, legend, input, textarea,
+	p, blockquote, th, td, nav, header, main, footer, article, 
+	aside, details, figcaption, figure, mark, section, summary,
+	time, xmp, hr, p, button,
+	input::-webkit-file-upload-button,
+	input::-webkit-inner-spin-button
+{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	font-family: inherit;
+	text-decoration: none;
+	text-indent: 0;
+	background: none;
+	margin: 0;
+	padding: 0;
+	appearance: none;
+	border: none;
+	border-spacing: 0;
+	color: inherit;
+}
+
+	input::-webkit-calendar-picker-indicator
+{
+	display: none;
+}
+
+	*:focus
+{
+	outline: none;
+}
+
+	input::-webkit-search-decoration 
+{
+ 	 -webkit-appearance: none;
+}
+
+	pre, xmp
+{
+	white-space: pre-wrap;
+}
+
+	main
+{
+	display: block;
+}
+
+	table 
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+	fieldset, img 
+{
+	border: 0;
+}
+
+	ol, ul 
+{
+	list-style: none;
+}
+
+	caption, th 
+{
+	text-align: left;
+}
+
+	hr
+{
+	border: 0;
+	height: 1px;
+	background-color: #000;
+}
+
+	span
+{
+	display: inline-block;
+}
+
+	q:before, q:after 
+{
+	content:'';
+}
+
+	abbr, acronym 
+{
+	border: 0;
+	font-variant: normal;
+}
+
+	sup 
+{
+	vertical-align: baseline;
+}
+
+	sub 
+{
+	vertical-align: baseline;
+}
+
+	input, textarea, select 
+{
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	*font-size: 100%;
+	outline: none;
+	border: none;
+	border-radius: 0px;
+	background-color: transparent;
+}
+
+	img 
+{
+	max-width: 100%;
+	height: auto;
+	border: 0;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+
+	/* Structure Wrappers */
+	
+	.wide 
+{
+	position: relative;
+	width: 100%;
+	margin: auto;
+}
+
+	.wide .wrapper
+{
+	clear: both;
+}
+
+	.wrapper 
+{
+	position: relative;
+	width: 1200px;
+	margin: auto;
+	max-width: 100%!important;
+}
+
+	.wrapper.wide 
+{
+	width: 100%;
+}
+
+	.wrapper .wrapper 
+{
+	padding-left: 0px!important;
+	padding-right: 0px!important; 
+	clear: both;
+}
+
+	/* floated layout clearfix */
+
+	.wrapper:before, .wrapper:after,
+	.wide:before, .wide:after,
+	form:before, form:after,
+	.d-100:before, .t-100:before, .m-100:before,
+	.d-95:before, .t-95:before, .m-95:before,
+	.d-90:before, .t-90:before, .m-90:before,
+	.d-85:before, .t-85:before, .m-85:before,
+	.d-80:before, .t-80:before, .m-80:before,
+	.d-75:before, .t-75:before, .m-75:before,
+	.d-70:before, .t-70:before, .m-70:before,
+	.d-67:before, .t-67:before, .m-67:before,
+	.d-65:before, .t-65:before, .m-65:before,
+	.d-60:before, .t-60:before, .m-60:before,
+	.d-55:before, .t-55:before, .m-55:before,
+	.d-50:before, .t-50:before, .m-50:before,
+	.d-45:before, .t-45:before, .m-45:before,
+	.d-40:before, .t-40:before, .m-40:before,
+	.d-35:before, .t-35:before, .m-35:before,
+	.d-33:before, .t-33:before, .m-33:before,
+	.d-30:before, .t-30:before, .m-30:before,
+	.d-25:before, .t-25:before, .m-25:before,
+	.d-20:before, .t-20:before, .m-20:before,
+	.d-15:before, .t-15:before, .m-15:before,
+	.d-10:before, .t-10:before, .m-10:before,
+	.d-5:before, .t-5:before, .m-5:before,
+	.d-100:after, .t-100:after, .m-100:after,
+	.d-95:after, .t-95:after, .m-95:after,
+	.d-90:after, .t-90:after, .m-90:after,
+	.d-85:after, .t-85:after, .m-85:after,
+	.d-80:after, .t-80:after, .m-80:after,
+	.d-75:after, .t-75:after, .m-75:after,
+	.d-70:after, .t-70:after, .m-70:after,
+	.d-67:after, .t-67:after, .m-67:after,
+	.d-65:after, .t-65:after, .m-65:after,
+	.d-60:after, .t-60:after, .m-60:after,
+	.d-55:after, .t-55:after, .m-55:after,
+	.d-50:after, .t-50:after, .m-50:after,
+	.d-45:after, .t-45:after, .m-45:after,
+	.d-40:after, .t-40:after, .m-40:after,
+	.d-35:after, .t-35:after, .m-35:after,
+	.d-33:after, .t-33:after, .m-33:after,
+	.d-30:after, .t-30:after, .m-30:after,
+	.d-25:after, .t-25:after, .m-25:after,
+	.d-20:after, .t-20:after, .m-20:after,
+	.d-15:after, .t-15:after, .m-15:after,
+	.d-10:after, .t-10:after, .m-10:after,
+	.d-5:after, .t-5:after, .m-5:after
+{ 
+	content: " "; 
+	display: table; 
+}
+
+	/* floated layout clearfix */
+
+	.wrapper:after, .wide:after, form:after,
+	.d-100:after, .t-100:after, .m-100:after,
+	.d-95:after, .t-95:after, .m-95:after,
+	.d-90:after, .t-90:after, .m-90:after,
+	.d-85:after, .t-85:after, .m-85:after,
+	.d-80:after, .t-80:after, .m-80:after,
+	.d-75:after, .t-75:after, .m-75:after,
+	.d-70:after, .t-70:after, .m-70:after,
+	.d-67:after, .t-67:after, .m-67:after,
+	.d-65:after, .t-65:after, .m-65:after,
+	.d-60:after, .t-60:after, .m-60:after,
+	.d-55:after, .t-55:after, .m-55:after,
+	.d-50:after, .t-50:after, .m-50:after,
+	.d-45:after, .t-45:after, .m-45:after,
+	.d-40:after, .t-40:after, .m-40:after,
+	.d-35:after, .t-35:after, .m-35:after,
+	.d-33:after, .t-33:after, .m-33:after,
+	.d-30:after, .t-30:after, .m-30:after,
+	.d-25:after, .t-25:after, .m-25:after,
+	.d-20:after, .t-20:after, .m-20:after,
+	.d-15:after, .t-15:after, .m-15:after,
+	.d-10:after, .t-10:after, .m-10:after,
+	.d-5:after, .t-5:after, .m-5:after
+{ 
+	clear: both; 
+}
+
+
+	/* Desktop Layout */
+	
+	.d-100, .t-100, .m-100,
+	.d-95, .t-95, .m-95,
+	.d-90, .t-90, .m-90,
+	.d-85, .t-85, .m-85,
+	.d-80, .t-80, .m-80,
+	.d-75, .t-75, .m-75,
+	.d-70, .t-70, .m-70,
+	.d-67, .t-67, .m-67,
+	.d-65, .t-65, .m-65,
+	.d-60, .t-60, .m-60,
+	.d-55, .t-55, .m-55,
+	.d-50, .t-50, .m-50,
+	.d-45, .t-45, .m-45,
+	.d-40, .t-40, .m-40,
+	.d-35, .t-35, .m-35,
+	.d-33, .t-33, .m-33,
+	.d-30, .t-30, .m-30,
+	.d-25, .t-25, .m-25,
+	.d-20, .t-20, .m-20,
+	.d-15, .t-15, .m-15,
+	.d-10, .t-10, .m-10,
+	.d-5, .t-5, .m-5
+{
+	float: left;
+	position: relative;
+	min-height: 1px;
+}
+
+	.d-100 
+{
+	width: 100%;
+}
+	.d-95 
+{
+	width: 95%;
+}
+	.d-90 
+{
+	width: 90%;
+}
+	.d-85 
+{
+	width: 85%;
+}
+	.d-80 
+{
+	width: 80%;
+}
+	.d-75 
+{
+	width: 75%;
+}
+	.d-70 
+{
+	width: 70%;
+}
+	.d-67 
+{
+	width: 66.667%;
+}
+	.d-65 
+{
+	width: 65%;
+}
+	.d-60 
+{
+	width: 60%;
+}
+	.d-55 
+{
+	width: 55%;
+}
+	.d-50 
+{
+	width: 50%;
+}
+	.d-45 
+{
+	width: 45%;
+}
+	.d-40 
+{
+	width: 40%;
+}
+	.d-35 
+{
+	width: 35%;
+}
+	.d-33 
+{
+	width: 33.333%;
+}
+	.d-30 
+{
+	width: 30%;
+}
+	.d-25
+{
+	width: 25%;
+}
+	.d-20 
+{
+	width: 20%;
+}
+	.d-15 
+{
+	width: 15%;
+}
+	.d-10 
+{
+	width: 10%;
+}
+	.d-5 
+{
+	width: 5%;
+}
+
+
+	/* Centering */
+	
+	.center
+{
+	clear: both; 
+	float: none; 
+	margin: auto;
+}
+
+	/* Centering multiple columns */
+	
+	.wrapper.center,
+	.wide.center
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+	.wrapper.center:before,
+	.wide.center:before,
+	.wrapper.after:after,
+	.wide.center:after
+{
+	display: flex;
+}
+
+	/* Vertical Centering */
+
+	.vcenter
+{
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+	/* Desktop Hiding */
+	
+	.d-hide 
+{
+	display: none!important;
+}
+
+
+	/* Tablet Styles */
+
+	@media screen and (max-width:1023px) 	
+{
+
+	/* Returning desktop only styles */
+
+	.d-hide 
+{
+	display: inherit!important;
+}
+
+	/* Tablet Layout */
+
+	.t-100 
+{
+	width: 100%;
+}
+	.t-95 
+{
+	width: 95%;
+}
+	.t-90 
+{
+	width: 90%;
+}
+	.t-85 
+{
+	width: 85%;
+}
+	.t-80 
+{
+	width: 80%;
+}
+	.t-75 
+{
+	width: 75%;
+}
+	.t-70 
+{
+	width: 70%;
+}
+	.t-67 
+{
+	width: 66.667%;
+}
+	.t-65 
+{
+	width: 65%;
+}
+	.t-60 
+{
+	width: 60%;
+}
+	.t-55 
+{
+	width: 55%;
+}
+	.t-50 
+{
+	width: 50%;
+}
+	.t-45 
+{
+	width: 45%;
+}
+	.t-40 
+{
+	width: 40%;
+}
+	.t-35 
+{
+	width: 35%;
+}
+	.t-33 
+{
+	width: 33.333%;
+}
+	.t-30 
+{
+	width: 30%;
+}
+	.t-25
+{
+	width: 25%;
+}
+	.t-20 
+{
+	width: 20%;
+}
+	.t-15 
+{
+	width: 15%;
+}
+	.t-10 
+{
+	width: 10%;
+}
+	.t-5 
+{
+	width: 5%;
+}
+
+	/* Tablet Hiding */
+	
+	.t-hide 
+{
+	display: none!important;
+}
+
+
+} 	/* @media close max width 980 */
+
+
+
+	/* Mobile Styles */
+
+	@media screen and (max-width:767px) 	
+{
+		
+	/* Returning Tablet only styles */
+
+	.t-hide 
+{
+	display: inherit!important;
+}	
+
+	/* Mobile Layout */
+	
+
+	.m-100 
+{
+	width: 100%;
+}
+	.m-95 
+{
+	width: 95%;
+}
+	.m-90 
+{
+	width: 90%;
+}
+	.m-85 
+{
+	width: 85%;
+}
+	.m-80 
+{
+	width: 80%;
+}
+	.m-75 
+{
+	width: 75%;
+}
+	.m-70 
+{
+	width: 70%;
+}
+	.m-67 
+{
+	width: 66.667%;
+}
+	.m-65 
+{
+	width: 65%;
+}
+	.m-60 
+{
+	width: 60%;
+}
+	.m-55 
+{
+	width: 55%;
+}
+	.m-50 
+{
+	width: 50%;
+}
+	.m-45 
+{
+	width: 45%;
+}
+	.m-40 
+{
+	width: 40%;
+}
+	.m-35 
+{
+	width: 35%;
+}
+	.m-33 
+{
+	width: 33.333%;
+}
+	.m-30 
+{
+	width: 30%;
+}
+	.m-25
+{
+	width: 25%;
+}
+	.m-20 
+{
+	width: 20%;
+}
+	.m-15 
+{
+	width: 15%;
+}
+	.m-10 
+{
+	width: 10%;
+}
+	.m-5 
+{
+	width: 5%;
+}
+
+	/* Mobile Hiding */
+	
+	.m-hide 
+{
+	display: none!important;
+}
+
+	
+} 	/* @media close max width 767 */
+

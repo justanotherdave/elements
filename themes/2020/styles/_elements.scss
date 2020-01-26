@@ -1,0 +1,572 @@
+
+	// Body
+	
+		body
+	{
+		@include font-regular;
+		@include font-medium;
+		background-color: $white;
+		color: $black;
+	}
+	
+		.section
+	{
+		margin-top: $large;
+		margin-bottom: $large;
+	}
+	
+	// Container
+		
+		.container > :first-child,
+	{
+		margin-top: 0px;
+	}
+	
+		.container > :last-child,
+	{
+		margin-bottom: 0px;
+	}
+	
+	// Headings
+		
+		h1 em, h1, h2, h3, h4, h5, h6
+	{
+		@include font-heading-bold;
+		margin-top: $smallmedium;
+		margin-bottom: $smallmedium;
+	}
+	
+		h1 em
+	{
+		font-size: 68px;
+		line-height: 89px;
+	}
+		
+		h1
+	{
+		font-size: 55px;
+		line-height: 68px;
+	}
+	
+		h2
+	{
+		font-size: 42px;
+		line-height: 55px;
+	}
+	
+		h3
+	{
+		font-size: 30px;
+		line-height: 38px;
+	}
+	
+		h4
+	{
+		font-size: 26px;
+		line-height: 34px;
+	}
+	
+		h5, h6
+	{
+		font-size: 21px;
+		line-height: 34px;
+	}
+	
+	// Semanic markup
+		
+		p
+	{
+		@include font-regular;
+		margin-top: $smallmedium;
+		margin-bottom: $smallmedium;
+	}
+	
+		b, strong
+	{
+		@include font-bold;
+	}
+	
+		em
+	{
+		@include font-large;
+	}
+	
+		i
+	{
+		@include font-italic;
+	}
+	
+		small
+	{
+		@include font-small;
+	}
+	
+		sub
+	{
+		@include font-small;
+		vertical-align: text-bottom;
+	}
+	
+		sup
+	{
+		@include font-small;
+		vertical-align: text-top;
+	}
+	
+		ins
+	{
+		color: $darkgrey;
+	}
+	
+		del
+	{
+		text-decoration: line-through;
+		color: $darkgrey;
+	}
+	
+		mark
+	{
+		background-color: $lightergrey;
+		padding: $thick;
+		padding-top: $thin;
+		padding-bottom: $thin;
+	}
+	
+		p a
+	{
+		@include font-bold;
+		text-decoration: underline;
+		color: $darkergrey;
+	}
+	
+		p a:hover
+	{
+		color: $black;
+	}
+	
+		code, kbd, samp, var
+	{
+		@include font-code;
+		font-size: 17px;
+	}
+	
+		cite, dfn, q
+	{
+		@include font-italic;
+	}
+	
+		q:before
+	{
+		content: open-quote;
+	}
+	
+		q:after
+	{
+		content: close-quote;
+	}
+	
+		abbr
+	{
+		
+	}
+	
+		time
+	{
+		
+	}
+	
+	// Block markup
+	
+		address
+	{
+		margin-top: $smallmedium;
+		margin-bottom: $smallmedium;
+	}
+	
+		blockquote
+	{
+		margin-top: $smallmedium;
+		margin-bottom: $smallmedium;
+		padding: $medium;
+		padding-bottom: $smallmedium;
+		background-color: $lightergrey;
+		@include font-large;
+		border-radius: $thick;
+	}
+	
+		blockquote cite
+	{
+		display: block;
+		text-align: right;
+		@include font-medium;
+	}
+	
+		pre, xmp
+	{
+		margin-top: $smallmedium;
+		margin-bottom: $smallmedium;
+		@include font-code;
+		font-size: 17px;
+		background-color: $darkergrey;
+		padding: $small;
+		color: $lightergrey;
+		border-radius: $thick;
+	}
+	
+		hr
+	{
+		margin-top: $smallmedium;
+		margin-bottom: $smallmedium;
+		height: $thin;
+		background-color: $lightergrey;
+	}
+	
+	// Lists
+	
+		.container ul,
+		.container ol,
+		.container dl
+	{
+		margin-top: $smallmedium;
+		margin-bottom: $smallmedium;
+		margin-left: $small;
+	}
+	
+		.container ul li ul,
+		.container ol li ol
+	{
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	
+		.container ul li:before,
+		.container ol li:before,
+		.container dl dt:before
+	{
+		font-family: microns;
+		color: $darkergrey;
+		position: absolute;
+		margin-left: -$small;
+	}
+	
+		.container ul li:before
+	{
+		content: "\E71A";
+		color: $darkgrey;
+	}
+	
+		.container ol 
+	{
+		counter-reset: counter;
+	}
+	
+		.container ol li
+	{
+		counter-increment: counter;
+	}
+	
+		.container ol li::before
+	{
+		content: counter(counter) ".";
+		font-size: 12px;
+		vertical-align: top;
+		font-weight: bold;
+		color: $darkgrey;
+	}
+	
+		.container dl dt
+	{
+
+	}
+	
+		.container dl dt:before
+	{
+		content: "\E71A";
+		color: $darkgrey;
+	}
+	
+		.container dl dd
+	{
+		@include font-small;
+		color: $darkgrey;
+	}
+		
+	// Tables
+	
+		.container table
+	{
+		width: 100%;
+	}
+	
+		table thead tr th,
+		table tbody tr td,
+		table tfoot tr td,
+		table tr td
+	{
+		padding: $xsmall 15px $xsmall 15px;
+	}
+	
+		table thead tr
+	{
+		background-color: $darkergrey;
+		@include font-heading;
+		@include font-large;
+		color: $white;
+	}
+	
+		table thead tr th:first-of-type,
+		table tbody tr td:first-of-type
+	{
+		border-radius: $thick 0px 0px $thick;
+	}
+	
+		table thead tr th:last-of-type,
+		table tbody tr td:last-of-type
+	{
+		border-radius: 0px $thick $thick 0px;
+	}
+	
+		table tbody tr:nth-of-type(even)
+	{
+		background-color: $lightergrey;
+	}
+	
+		table tfoot tr
+	{
+		color: $darkgrey;
+	}
+	
+		table tbody tr:last-of-type
+	{
+
+	}
+	
+		table thead tr th,
+		table tbody tr td,
+		table tfoot tr td
+	{
+		
+	}
+	
+	// Form
+	
+		.container form
+	{
+		margin-top: $smallmedium;
+		margin-bottom: $smallmedium;
+	}
+	
+		form > div,
+		form fieldset > div
+	{
+		margin-top: $smallmedium;
+		margin-bottom: $smallmedium;
+		position: relative;
+	}
+	
+		form > :first-child,
+		form fieldset > :first-child,
+		form fieldset > legend + div
+	{
+		margin-top: 0px;
+	}
+	
+		form > :last-child,
+		form fieldset > :last-child
+	{
+		margin-bottom: 0px;
+	}
+	
+	// Fieldset and legend
+	
+		form fieldset
+	{
+		border: $thin $lightergrey solid;
+		padding: $smallmedium;
+		border-radius: $thick;
+	}
+	
+		form fieldset legend
+	{
+		@include font-heading-bold;
+		font-size: 26px;
+		line-height: 34px;
+		background-color: $white;
+		padding-left: $xsmall;
+		padding-right: $xsmall;
+		margin-bottom: -$xsmall;
+		margin-left: -$xsmall;
+	}
+	
+	// Label
+	
+		form label
+	{
+		display: block;
+		vertical-align: middle;
+		width: 100%;
+		@include font-small;
+		padding-bottom: $xsmall;
+	}
+	
+	// Inputs
+	
+		form input,
+		form textarea,
+		form select
+	{
+		border: $thin $lightergrey solid;
+		padding: $xsmall 15px $xsmall 15px;
+		width: 100%; 
+		color: $black;
+		border-radius: $thick;
+	}
+	
+		form input,
+		form select
+	{
+		height: 50px;
+	}
+	
+		form input:focus,
+		form textarea:focus,
+		form select:focus
+	{
+		border: $thin $darkgrey solid;
+	}
+	
+		form input::placeholder,
+		form textarea::placeholder,
+		form select::placeholder
+	{
+		color: $lightgrey;
+	}
+	
+	// Buttons
+	
+		form input[type="button"],
+		form input[type="submit"],
+		form input[type="reset"],
+		form button,
+		form input[type=file]::-webkit-file-upload-button,
+		a.button
+	{
+		width: auto;
+		border: none;
+		padding: $xsmall $small $xsmall $small;
+		color: $black;
+		height: 50px;
+		background-color: $lightergrey;
+		border-radius: $thick;
+		@include font-heading;
+		display: inline-block;
+	}
+	
+		form input[type="button"]:hover,
+		form input[type="submit"]:hover,
+		form input[type="reset"]:hover,
+		form button:hover,
+		form input[type=file]::-webkit-file-upload-button:hover,
+		a.button:hover
+	{
+		background-color: $lightgrey;
+	}
+
+		a.button.alt,
+		form input[type=file]::-webkit-file-upload-button
+	{
+		box-shadow: inset 0px 0px 0px $thin $lightergrey;
+		background-color: transparent;
+	}
+	
+		a.button.alt:hover,
+		form input[type=file]::-webkit-file-upload-button:hover
+	{
+		background-color: $lightergrey;
+	}
+	
+	
+	// Select
+	
+		form .select:after
+	{
+		font-family: microns;
+		content: "\E711";
+		@include font-large;
+		position: absolute;
+		right: 15px;
+		bottom: 6px;
+		pointer-events: none;
+	}
+	
+	
+	
+	// Checkboxes and radio buttons
+	
+		form .checkbox-radio label:not(:first-of-type)
+	{
+		@include font-medium;
+		padding-bottom: 0px;
+	}
+	
+		input[type="checkbox"],
+		input[type="radio"],
+		input[type="checkbox"]:focus,
+		input[type="radio"]:focus
+	{
+		border: none;
+		padding: 0px;
+		width: 20px; 
+		height: 20px;
+	}
+	
+		input[type="checkbox"]:before
+	{
+		font-family: microns;
+		content: "\E750";
+		color: $lightgrey;
+	}
+	
+		input[type="checkbox"]:checked:before
+	{
+		content: "\E754";
+		color: $darkgrey;
+	}
+	
+		input[type="radio"]:before
+	{
+		font-family: microns;
+		content: "\E756";
+		color: $lightgrey;
+	}
+	
+		input[type="radio"]:checked:before
+	{
+		content: "\E757";
+		color: $darkgrey;
+	}
+	
+	// File upload
+	
+		form input[type=file]
+	{
+		border: none;
+		padding: 0px;
+		border-radius: none;
+		height: auto;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+		
+		
