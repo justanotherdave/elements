@@ -190,6 +190,7 @@
 						<option>Option two</option>
 						<option>Option three</option>
 					</select>
+					<span>Bajumbo moi noi noi jecker Dabatto bunkergait jun jun Nora juerue-rotto pura-pura petto Puraret dum dum. Papuranoi noi noi jecker Dabatto bumperget tum tum Ora poerketino bookeran tan-tan-so.</span>
 				</div>
 				<div class="checkbox-radio">
 					<label>Checkboxes</label>
