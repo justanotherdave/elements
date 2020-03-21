@@ -495,7 +495,10 @@
 	
 		form select
 	{
-		
+		background-position: calc(100% - 15px) 13px;
+		background-repeat: no-repeat;
+		background-size: 15px;
+		background-image: url(/themes/2020/images/svg/caret-down.svg);
 	}
 	
 		
@@ -522,12 +525,13 @@
 		top: 4px;
 		border-color: $lightergrey;
 		background-position: center center;
+		background-repeat: no-repeat;
 	}
 	
 		input[type="checkbox"]:checked
 	{
 		background-image: url(/themes/2020/images/svg/i-tick.svg);
-		background-size: 115%;
+		background-size: 95%;
 	}
 	
 		input[type="radio"],
@@ -539,7 +543,7 @@
 		input[type="radio"]:checked
 	{
 		background-image: url(/themes/2020/images/svg/i-bullet.svg);
-		background-size: 100%;
+		background-size: 80%;
 	}
 
 	
