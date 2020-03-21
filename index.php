@@ -182,7 +182,7 @@
 					<label>Date</label>
 					<input type="date" placeholder="Enter a date">
 				</div>
-				<div class="select">
+				<div>
 					<label>Select</label>
 					<select required>
 						<option disabled selected hidden>Select your option</option>

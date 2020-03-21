@@ -486,25 +486,20 @@
 	
 	// Select
 	
-		form .select:after
+		form select
 	{
-		font-family: microns;
-		content: "\E711";
-		@include font-large;
-		position: absolute;
-		right: 15px;
-		bottom: 6px;
-		pointer-events: none;
+		
 	}
 	
-	
-	
+		
 	// Checkboxes and radio buttons
 	
 		form .checkbox-radio label:not(:first-of-type)
 	{
 		@include font-medium;
 		padding-bottom: 0px;
+		padding-left: $smallmedium;
+		position: relative;
 	}
 	
 		input[type="checkbox"],
@@ -512,37 +507,34 @@
 		input[type="checkbox"]:focus,
 		input[type="radio"]:focus
 	{
-		border: none;
+		position: absolute;
 		padding: 0px;
-		width: 20px; 
-		height: 20px;
+		width: $small; 
+		height: $small;
+		left: 0px;
+		top: 4px;
+		border-color: $lightergrey;
+		background-position: center center;
 	}
 	
-		input[type="checkbox"]:before
+		input[type="checkbox"]:checked
 	{
-		font-family: microns;
-		content: "\E750";
-		color: $lightgrey;
+		background-image: url(/themes/2020/images/svg/i-tick.svg);
+		background-size: 115%;
 	}
 	
-		input[type="checkbox"]:checked:before
+		input[type="radio"],
+		input[type="radio"]:focus
 	{
-		content: "\E754";
-		color: $darkgrey;
+		border-radius: 100%;
 	}
 	
-		input[type="radio"]:before
+		input[type="radio"]:checked
 	{
-		font-family: microns;
-		content: "\E756";
-		color: $lightgrey;
+		background-image: url(/themes/2020/images/svg/i-bullet.svg);
+		background-size: 100%;
 	}
-	
-		input[type="radio"]:checked:before
-	{
-		content: "\E757";
-		color: $darkgrey;
-	}
+
 	
 	// File upload
 	
