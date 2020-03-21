@@ -14,6 +14,11 @@
 /* Import local fonts */
 
 @font-face {
+  font-family: jetbrains;
+  src: url(/themes/2020/fonts/jetbrains.woff2);
+}
+
+@font-face {
   font-family: microns;
   src: url(/themes/2020/fonts/microns.woff2);
 }

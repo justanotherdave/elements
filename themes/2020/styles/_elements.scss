@@ -146,8 +146,7 @@
 	
 		code, kbd, samp, var
 	{
-		@include font-code;
-		font-size: 17px;
+		font-family: jetbrains;
 	}
 	
 		cite, dfn, q
@@ -205,8 +204,7 @@
 	{
 		margin-top: $smallmedium;
 		margin-bottom: $smallmedium;
-		@include font-code;
-		font-size: 17px;
+		font-family: jetbrains;
 		background-color: $darkergrey;
 		padding: $small;
 		color: $lightergrey;
