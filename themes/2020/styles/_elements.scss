@@ -146,7 +146,7 @@
 	
 		code, kbd, samp, var
 	{
-		font-family: jetbrains;
+		@include font-code;
 	}
 	
 		cite, dfn, q
@@ -204,11 +204,11 @@
 	{
 		margin-top: $smallmedium;
 		margin-bottom: $smallmedium;
-		font-family: jetbrains;
 		background-color: $darkergrey;
 		padding: $small;
 		color: $lightergrey;
 		border-radius: $thick;
+		@include font-code;
 	}
 	
 		hr
@@ -241,15 +241,16 @@
 		.container ol li:before,
 		.container dl dt:before
 	{
-		font-family: microns;
+		font-family: fontawesome;
 		color: $darkergrey;
 		position: absolute;
 		margin-left: -$small;
+		font-size: 8px;
 	}
 	
 		.container ul li:before
 	{
-		content: "\E71A";
+		content: "\f111";
 		color: $darkgrey;
 	}
 	
@@ -279,7 +280,7 @@
 	
 		.container dl dt:before
 	{
-		content: "\E71A";
+		content: "\f111";
 		color: $darkgrey;
 	}
 	
@@ -495,10 +496,10 @@
 	
 		form select
 	{
-		background-position: calc(100% - 15px) 13px;
+		background-position: calc(100% - 15px) 15px;
 		background-repeat: no-repeat;
-		background-size: 15px;
-		background-image: url(/themes/2020/images/svg/caret-down.svg);
+		background-size: 12px;
+		background-image: url(/themes/2020/images/svg/caret-down-solid.svg);
 	}
 	
 		
@@ -526,12 +527,12 @@
 		border-color: $lightergrey;
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 70%;
 	}
 	
 		input[type="checkbox"]:checked
 	{
-		background-image: url(/themes/2020/images/svg/i-tick.svg);
+		background-image: url(/themes/2020/images/svg/check-solid.svg);
 	}
 	
 		input[type="radio"],
@@ -542,7 +543,7 @@
 	
 		input[type="radio"]:checked
 	{
-		background-image: url(/themes/2020/images/svg/i-bullet.svg);
+		background-image: url(/themes/2020/images/svg/circle-solid.svg);
 	}
 
 	
