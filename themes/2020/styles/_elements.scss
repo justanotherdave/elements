@@ -7,7 +7,28 @@
 		@include font-medium;
 		background-color: $white;
 		color: $black;
+		scrollbar-width: $xsmall;
+		scrollbar-color: $darkgrey $lightergrey;
 	}
+	
+		::-webkit-scrollbar 
+	{
+		width: 11px;
+	}
+	
+		::-webkit-scrollbar-track 
+	{
+		background: $lightergrey;
+	}
+	
+		::-webkit-scrollbar-thumb 
+	{
+		background-color: $grey;
+		border-radius: 10px;
+		border: 2px solid $lightergrey;
+	}
+	
+	// Section
 	
 		.section
 	{
