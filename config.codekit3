@@ -54,22 +54,6 @@
 		"oAP": "/themes/2020/fonts/fa-solid-900.woff2",
 		"oF": 0
 		},
-	"/themes/2020/fonts/jetbrains.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/themes/2020/fonts/jetbrains.woff2",
-		"oF": 0
-		},
-	"/themes/2020/fonts/microns.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/themes/2020/fonts/microns.woff2",
-		"oF": 0
-		},
 	"/themes/2020/images/svg/caret-down-solid.svg": {
 		"ft": 2097152,
 		"miP": 0,

@@ -22,15 +22,7 @@
 	box-sizing: inherit;
 }
 
-	body, html 
-{
-	min-height: 100%;
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-}
-
-	address, caption, cite, code,
+	body, html, address, caption, cite, code,
 	dfn, em, strong, th, var, b, i,
 	small, h1, h2, h3, h4, h5, h6,
 	sub, sup, ins, del, mark, a,
@@ -58,6 +50,7 @@
 	border: none;
 	border-spacing: 0;
 	color: inherit;
+	overflow-anchor: none;
 }
 
 	input::-webkit-calendar-picker-indicator
